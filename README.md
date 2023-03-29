@@ -1,4 +1,4 @@
-# Data analyst
+# Data analyrics
 
 ## Описание:
 В репозитории представлены проекты курса [Аналитик данных](https://praktikum.yandex.ru/data-analyst/) (Яндекс.Практикум).
