@@ -7,7 +7,7 @@
 ## Навыки: 
 SQL, PostgreSQL
 
-## База данных
+## База данных:
 ![-]( https://github.com/MikhailMakhnev/data_analytics/blob/main/06.%20Project%20-%20Research%20investments%20in%20start-up%20companies/06.%20Project%20-%20scheme.png)
 
   •	acquisition (cодержит информацию о покупках одних компаний другими);
