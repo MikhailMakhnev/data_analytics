@@ -82,15 +82,15 @@ LIMIT 10;
 SELECT first_name,
        last_name,
        instituition
-FROM people as pe
-LEFT OUTER JOIN education as ed ON pe.id=ed.person_id;
+FROM people AS pe
+LEFT OUTER JOIN education AS ed ON pe.id=ed.person_id;
 
 ---
 SELECT com.name,
        COUNT(DISTINCT ed.instituition)
-FROM people as pe
-JOIN education as ed ON pe.id=ed.person_id
-JOIN company as com ON pe.company_id=com.id
+FROM people AS pe
+JOIN education AS ed ON pe.id=ed.person_id
+JOIN company AS com ON pe.company_id=com.id
 GROUP BY 1
 ORDER BY 2 DESC
 LIMIT 5;
@@ -116,8 +116,8 @@ comp AS (SELECT DISTINCT com.id AS ms
 
 
 SELECT DISTINCT id
-FROM people as pl
-JOIN comp on pl.company_id=comp.ms
+FROM people AS pl
+JOIN comp ON pl.company_id=comp.ms
 WHERE pl.company_id = comp.ms;
 
 ---
@@ -133,9 +133,9 @@ comp AS (SELECT DISTINCT com.id AS ms
 
 SELECT DISTINCT pl.id,
        ed.instituition
-FROM people as pl
-JOIN comp on pl.company_id=comp.ms
-JOIN education as ed ON pl.id=ed.person_id
+FROM people AS pl
+JOIN comp ON pl.company_id=comp.ms
+JOIN education AS ed ON pl.id=ed.person_id
 WHERE pl.company_id = comp.ms;
 
 ---
@@ -151,9 +151,9 @@ comp AS (SELECT DISTINCT com.id AS ms
 
 SELECT pl.id,
        count(ed.instituition)
-FROM people as pl
-JOIN comp on pl.company_id=comp.ms
-JOIN education as ed ON pl.id=ed.person_id
+FROM people AS pl
+JOIN comp ON pl.company_id=comp.ms
+JOIN education AS ed ON pl.id=ed.person_id
 WHERE pl.company_id = comp.ms
 group by 1;
 
@@ -169,12 +169,12 @@ comp AS (SELECT DISTINCT com.id AS ms
 
 
  sel AS      (SELECT pl.id,
-               count(ed.instituition) as co
-        FROM people as pl
-        JOIN comp on pl.company_id=comp.ms
+               count(ed.instituition) AS co
+        FROM people AS pl
+        JOIN comp ON pl.company_id=comp.ms
         JOIN education as ed ON pl.id=ed.person_id
         WHERE pl.company_id = comp.ms
-        group by 1)
+        GROUP BY 1)
 SELECT avg(sel.co)
 FROM sel;
 
@@ -186,12 +186,12 @@ comp AS (SELECT DISTINCT com.id AS ms
          
          
  sel AS      (SELECT pl.id,
-               count(ed.instituition) as co
-        FROM people as pl
-        JOIN comp on pl.company_id=comp.ms
-        JOIN education as ed ON pl.id=ed.person_id
+               COUNT(ed.instituition) AS co
+        FROM people AS pl
+        JOIN comp ON pl.company_id=comp.ms
+        JOIN education AS ed ON pl.id=ed.person_id
         WHERE pl.company_id = comp.ms
-        group by 1)
+        GROUP BY 1)
 SELECT avg(sel.co)
 FROM sel;
 
@@ -236,12 +236,12 @@ LIMIT 10;
 ---
 SELECT c.name,
        tab.month
-FROM company as c
+FROM company AS c
 RIGHT JOIN ( SELECT company_id,
              EXTRACT(MONTH FROM funded_at) AS month
              FROM funding_round
              WHERE EXTRACT(YEAR FROM funded_at) BETWEEN 2010 AND 2013
-             and raised_amount <> 0
+             AND raised_amount <> 0
             ) AS tab ON c.id = tab.company_id
 WHERE c.category_code LIKE 'social';
 
@@ -309,9 +309,9 @@ WHERE  EXTRACT (YEAR FROM CAST (founded_at AS timestamp)) = '2013'
 
 
 SELECT t_11.cd,
-       t_11.total as "2011",
-       t_12.total as "2012",
-       t_13.total as "2013"
+       t_11.total AS "2011",
+       t_12.total AS "2012",
+       t_13.total AS "2013"
 FROM t_11
 JOIN t_12 ON t_11.cd=t_12.cd
 JOIN t_13 ON t_12.cd=t_13.cd
