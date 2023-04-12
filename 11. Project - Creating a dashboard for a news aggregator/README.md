@@ -11,4 +11,4 @@ Dash, Tableau, продуктовые метрики, построение да�
 
 ## [Дашборд](https://public.tableau.com/app/profile/mikhail.grafchel/viz/Proect_Dzen/Dashboard_dzen?publish=yes)
 
-## [Презинтация](
+## [Презинтация](https://github.com/MikhailMakhnev/data_analytics/blob/main/11.%20Project%20-%20Creating%20a%20dashboard%20for%20a%20news%20aggregator/presentation_Yandex_Dzen.pdf)
