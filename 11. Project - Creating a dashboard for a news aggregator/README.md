@@ -9,4 +9,4 @@
 ## Навыки: 
 Dash, Tableau, продуктовые метрики, построение дашбордов, MS PowerPoint
 
-Ссылка на дашборд:  https://public.tableau.com/app/profile/mikhail.grafchel/viz/Proect_Dzen/Dashboard_dzen?publish=yes
+## Ссылка на дашборд:  https://public.tableau.com/app/profile/mikhail.grafchel/viz/Proect_Dzen/Dashboard_dzen?publish=yes
